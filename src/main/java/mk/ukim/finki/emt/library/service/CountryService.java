@@ -10,11 +10,5 @@ import java.util.Optional;
 
 public interface CountryService {
     List<Country> listAll();
-    Country findById(Long id);
     Country create(String name, String continent);
-    Country edit (Long id, String name, String continent);
-    void deleteById(Long id);
-    Country findByName(String name);
-    List<Country> findAllByContinent(String continent);
-    Optional<Country> save(CountryDto countryDto);
 }

@@ -26,10 +26,4 @@ public class CountryRestController {
         return this.countryService.listAll();
     }
 
-    @PostMapping("/add")
-    public ResponseEntity<Country> save(@RequestBody CountryDto countryDto) {
-        return this.countryService.save(countryDto)
-                .map(country -> ResponseEntity.ok().body(country))
-                .orElseGet(() -> ResponseEntity.badRequest().build());
-    }
 }

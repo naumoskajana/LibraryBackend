@@ -95,7 +95,7 @@ public class BookServiceImpl implements BookService {
         Author author = this.authorRepository.findById(bookDto.getAuthor())
                 .orElseThrow(() -> new AuthorNotFoundException(bookDto.getAuthor()));
         BookType bookType = BookType.valueOf(bookDto.getBookType());
-//        this.bookRepository.deleteByName(bookDto.getName());
+        this.bookRepository.deleteByName(bookDto.getName());
         return Optional.of(this.bookRepository.save(new Book(bookDto.getName(),bookType,author,bookDto.getAvailableCopies())));
     }
 

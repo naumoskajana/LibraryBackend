@@ -26,10 +26,4 @@ public class AuthorRestController {
         return this.authorService.listAll();
     }
 
-    @PostMapping("/add")
-    public ResponseEntity<Author> save(@RequestBody AuthorDto authorDto) {
-        return this.authorService.save(authorDto)
-                .map(author -> ResponseEntity.ok().body(author))
-                .orElseGet(() -> ResponseEntity.badRequest().build());
-    }
 }
