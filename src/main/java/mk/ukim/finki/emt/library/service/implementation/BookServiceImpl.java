@@ -102,7 +102,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public Optional<Book> edit(Long id, BookDto bookDto) {
         Book book = this.bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException(id));
-        book.setName(book.getName());
+        book.setName(bookDto.getName());
         BookType bookType = BookType.valueOf(bookDto.getBookType());
         book.setBookType(bookType);
         Author author = this.authorRepository.findById(bookDto.getAuthor())

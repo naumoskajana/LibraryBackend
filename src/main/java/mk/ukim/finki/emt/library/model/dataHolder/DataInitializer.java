@@ -45,10 +45,10 @@ public class DataInitializer {
         int min = 1;
         int max = 100;
         this.bookService.create("Book1", BookType.BIOGRAPHY,authors.get(0).getId(), random.nextInt((max-min)+1)+min);
-        this.bookService.create("Book1", BookType.CLASSICS,authors.get(1).getId(), random.nextInt((max-min)+1)+min);
-        this.bookService.create("Book1", BookType.DRAMA,authors.get(2).getId(), random.nextInt((max-min)+1)+min);
-        this.bookService.create("Book1", BookType.FANTASY,authors.get(3).getId(), random.nextInt((max-min)+1)+min);
-        this.bookService.create("Book1", BookType.HISTORY,authors.get(4).getId(), random.nextInt((max-min)+1)+min);
+        this.bookService.create("Book2", BookType.CLASSICS,authors.get(1).getId(), random.nextInt((max-min)+1)+min);
+        this.bookService.create("Book3", BookType.DRAMA,authors.get(2).getId(), random.nextInt((max-min)+1)+min);
+        this.bookService.create("Book4", BookType.FANTASY,authors.get(3).getId(), random.nextInt((max-min)+1)+min);
+        this.bookService.create("Book5", BookType.HISTORY,authors.get(4).getId(), random.nextInt((max-min)+1)+min);
     }
 
 }
